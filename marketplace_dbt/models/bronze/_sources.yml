@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "The nine CSVs, read in place from data/raw/."
+    meta:
+      external_location: "read_csv('../data/raw/olist_{name}_dataset.csv', all_varchar=true, header=true)"
+    tables:
+      - name: customers
+      - name: geolocation
+      - name: orders
+      - name: order_items
+      - name: order_payments
+      - name: order_reviews
+      - name: products
+      - name: sellers
+      - name: product_category_name_translation
