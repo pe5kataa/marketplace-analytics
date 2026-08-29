@@ -1,8 +1,13 @@
 # ---- data ------------------------------------------------------------
 # Raw CSVs are public, immutable and ~120 MiB (one file is 58 MiB).
 # Gold parquet is a build artifact — `dbt build` regenerates it.
-# scripts/get_data.py refetches raw and creates these folders.
 data/
+
+# ---- python ----------------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
 
 # ---- dbt -------------------------------------------------------------
 target/
@@ -14,15 +19,7 @@ logs/
 *.duckdb
 *.duckdb.wal
 
-# ---- python ----------------------------------------------------------
-.venv/
-venv/
-__pycache__/
-*.py[cod]
-
 # ---- power bi --------------------------------------------------------
-# Using .pbip (text format), so the project folder IS committed.
-# These are the local caches it drops alongside it:
 .pbi/
 *.pbix
 *.Cache
