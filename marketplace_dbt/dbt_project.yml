@@ -33,3 +33,5 @@ models:
   marketplace_dbt:
     bronze:
       +materialized: table
+    silver:
+      +materialized: view
